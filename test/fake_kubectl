@@ -1,0 +1,31 @@
+#!/bin/sh
+
+
+echo '{
+    "apiVersion": "extensions/v1beta1",
+    "items": [
+        {
+            "apiVersion": "extensions/v1beta1",
+            "kind": "Deployment",
+            "metadata": {
+                "name": "web",
+                "namespace": "default",
+                "resourceVersion": "1147115"
+            },
+            "spec": {
+                "template": {
+                    "spec": {
+                        "containers": [
+                            {
+                                "image": "dkr.ecr.us-east-1.amazonaws.com/ruby-dev@sha256:abc123"
+                            },
+                            {
+                                "image": "dkr.ecr.us-east-1.amazonaws.com/ruby-sidecar@sha256:abc123"
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    ]
+}'

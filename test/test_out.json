@@ -1,0 +1,11 @@
+{
+    "params": {
+        "path": ".",
+        "dry_run": "true",
+        "debug": "true"
+    },
+    "source": {
+        "use_sidecar_kubectl_proxy": "true",
+        "kubectl_path": "./test/fake_kubectl"
+    }
+}
